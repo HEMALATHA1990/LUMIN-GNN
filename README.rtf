@@ -1,0 +1,294 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # LUMIN-GNN: Comprehensive Experimental Framework\
+\
+This repository contains the implementation of **LUMIN-GNN** and baseline Graph Neural Network models evaluated on multiple benchmark datasets.\
+\
+The project supports the following:\
+\
+- Datasets:\
+  - Cora\
+  - CiteSeer\
+  - OGBN-Arxiv\
+  - Chameleon\
+\
+- Models:\
+  - GCN\
+  - GAT\
+  - GraphSAGE\
+  - H2GCN\
+  - MixHop\
+  - LUMIN-GNN\
+\
+A total of **24 model-dataset combinations** are implemented.\
+\
+---\
+\
+# Running in Google Colab\
+\
+## 1. Clone the Repository\
+\
+```bash\
+!git clone <repository_url>\
+%cd repository_name\
+```\
+\
+or upload the project folder directly to Google Drive and mount it:\
+\
+```python\
+from google.colab import drive\
+drive.mount('/content/drive')\
+\
+%cd /content/drive/MyDrive/LUMIN-GNN\
+```\
+\
+---\
+\
+## 2. Install Dependencies\
+\
+### PyTorch Geometric\
+\
+```bash\
+!pip install torch-geometric\
+!pip install torch-scatter\
+!pip install torch-sparse\
+!pip install torch-cluster\
+!pip install torch-spline-conv\
+```\
+\
+### OGB Package\
+\
+```bash\
+!pip install ogb\
+```\
+\
+### Additional Packages\
+\
+```bash\
+!pip install numpy\
+!pip install scipy\
+!pip install scikit-learn\
+!pip install pandas\
+!pip install matplotlib\
+!pip install tqdm\
+```\
+\
+---\
+\
+# Project Structure\
+\
+```text\
+project/\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  datasets/\
+\uc0\u9474    \u9500 \u9472 \u9472  cora.py\
+\uc0\u9474    \u9500 \u9472 \u9472  citeseer.py\
+\uc0\u9474    \u9500 \u9472 \u9472  chameleon.py\
+\uc0\u9474    \u9492 \u9472 \u9472  ogbn_arxiv.py\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  models/\
+\uc0\u9474    \u9500 \u9472 \u9472  gcn.py\
+\uc0\u9474    \u9500 \u9472 \u9472  gat.py\
+\uc0\u9474    \u9500 \u9472 \u9472  graphsage.py\
+\uc0\u9474    \u9500 \u9472 \u9472  h2gcn.py\
+\uc0\u9474    \u9500 \u9472 \u9472  mixhop.py\
+\uc0\u9474    \u9492 \u9472 \u9472  lumin_gnn.py\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  experiments/\
+\uc0\u9474    \u9500 \u9472 \u9472  cora/\
+\uc0\u9474    \u9500 \u9472 \u9472  citeseer/\
+\uc0\u9474    \u9500 \u9472 \u9472  ogbn_arxiv/\
+\uc0\u9474    \u9492 \u9472 \u9472  chameleon/\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  train.py\
+\uc0\u9500 \u9472 \u9472  utils.py\
+\uc0\u9500 \u9472 \u9472  requirements.txt\
+\uc0\u9492 \u9472 \u9472  README.md\
+```\
+\
+---\
+\
+# Running Individual Experiments\
+\
+## Cora\
+\
+### GCN\
+\
+```bash\
+!python experiments/cora/gcn.py\
+```\
+\
+### GAT\
+\
+```bash\
+!python experiments/cora/gat.py\
+```\
+\
+### GraphSAGE\
+\
+```bash\
+!python experiments/cora/graphsage.py\
+```\
+\
+### H2GCN\
+\
+```bash\
+!python experiments/cora/h2gcn.py\
+```\
+\
+### MixHop\
+\
+```bash\
+!python experiments/cora/mixhop.py\
+```\
+\
+### LUMIN-GNN\
+\
+```bash\
+!python experiments/cora/lumin_gnn.py\
+```\
+\
+---\
+\
+## CiteSeer\
+\
+```bash\
+!python experiments/citeseer/gcn.py\
+!python experiments/citeseer/gat.py\
+!python experiments/citeseer/graphsage.py\
+!python experiments/citeseer/h2gcn.py\
+!python experiments/citeseer/mixhop.py\
+!python experiments/citeseer/lumin_gnn.py\
+```\
+\
+---\
+\
+## OGBN-Arxiv\
+\
+```bash\
+!python experiments/ogbn_arxiv/gcn.py\
+!python experiments/ogbn_arxiv/gat.py\
+!python experiments/ogbn_arxiv/graphsage.py\
+!python experiments/ogbn_arxiv/h2gcn.py\
+!python experiments/ogbn_arxiv/mixhop.py\
+!python experiments/ogbn_arxiv/lumin_gnn.py\
+```\
+\
+---\
+\
+## Chameleon\
+\
+```bash\
+!python experiments/chameleon/gcn.py\
+!python experiments/chameleon/gat.py\
+!python experiments/chameleon/graphsage.py\
+!python experiments/chameleon/h2gcn.py\
+!python experiments/chameleon/mixhop.py\
+!python experiments/chameleon/lumin_gnn.py\
+```\
+\
+---\
+\
+# Running All Experiments\
+\
+## Cora\
+\
+```bash\
+!python experiments/cora/run_all.py\
+```\
+\
+## CiteSeer\
+\
+```bash\
+!python experiments/citeseer/run_all.py\
+```\
+\
+## OGBN-Arxiv\
+\
+```bash\
+!python experiments/ogbn_arxiv/run_all.py\
+```\
+\
+## Chameleon\
+\
+```bash\
+!python experiments/chameleon/run_all.py\
+```\
+\
+---\
+\
+# Running the Entire Benchmark Suite\
+\
+```bash\
+!python run_all_experiments.py\
+```\
+\
+This will execute all:\
+\
+- 4 datasets\
+- 6 models\
+- 24 experimental combinations\
+\
+and save the results automatically.\
+\
+---\
+\
+# Expected Outputs\
+\
+Each experiment prints:\
+\
+```text\
+Epoch 000 Train 0.xxxx Val 0.xxxx Test 0.xxxx\
+Epoch 020 Train 0.xxxx Val 0.xxxx Test 0.xxxx\
+...\
+Early stopping at epoch xxx\
+\
+Best Validation Accuracy: xx.xx%\
+Best Test Accuracy: xx.xx%\
+```\
+\
+---\
+\
+# Generated Files\
+\
+The framework automatically saves:\
+\
+- Training Loss Curves\
+- Validation Loss Curves\
+- Test Loss Curves\
+- Accuracy Curves\
+- Final Results Tables\
+- Mean \'b1 Standard Deviation across runs\
+\
+inside:\
+\
+```text\
+results/\
+\uc0\u9500 \u9472 \u9472  cora/\
+\uc0\u9500 \u9472 \u9472  citeseer/\
+\uc0\u9500 \u9472 \u9472  ogbn_arxiv/\
+\uc0\u9492 \u9472 \u9472  chameleon/\
+```\
+\
+---\
+\
+# Reproducibility\
+\
+To reproduce the paper results:\
+\
+```python\
+seeds = [42, 123, 456, 789, 2024]\
+```\
+\
+Run each experiment using all seeds and report:\
+\
+```text\
+Mean Accuracy \'b1 Standard Deviation\
+```\
+\
+for all 24 combinations.}
